@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #333;
 }
 
 #container {
@@ -12,6 +13,7 @@ body {
   margin: 10% auto 0 auto;
   padding: 10px 19px 19px 19px;
   font-family: Arial, Helvetica, sans-serif;
+  border-radius: 2%;
 }
 
 .row {
@@ -31,6 +33,7 @@ body {
   color: #FFFFFF;
   font-size: 35px;
   line-height: 75px;
+	user-select: none;
 }
 
 .result {
@@ -38,9 +41,10 @@ body {
   display: flex;
   align-items: flex-end;
   flex-direction: row-reverse;
+  overflow: hidden;
   margin: 0 5px 0 5px;
   font-size: 90px;
-  line-height: 55px;
+  line-height: 65px;
 }
 
 #clean {
@@ -49,7 +53,7 @@ body {
   background: #4E505F;
 }
 
-#num_0 {
+#_0 {
   flex-grow: 3;
   margin-right: 10px;
 }
