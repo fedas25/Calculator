@@ -34,6 +34,7 @@ body {
   font-size: 35px;
   line-height: 75px;
 	user-select: none;
+  cursor: pointer;
 }
 
 .result {
