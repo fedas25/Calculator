@@ -1,13 +1,13 @@
 Calc = (action, a, b) => {
     switch (action) {
         case "sum":
-            return a + b;
+            return Number((a + b).toFixed(2));
         case "sub":
-            return a - b;
+            return Number((a - b).toFixed(2));
         case "multi":
-            return a * b;
+            return Number((a * b).toFixed(2));
         case "share":
-            return a / b;
+            return Number((a / b).toFixed(2));
     }
 }
 
@@ -39,8 +39,6 @@ let addNumForm = (button) => {
     }
 }
 
-
-
 let removeNumForm = () => {
     formResult.innerHTML = formResult.innerHTML.slice(0, formResult.innerHTML.length - 1);
     if (formResult.innerHTML === '') {
@@ -58,7 +56,7 @@ let actionButton = (button) => {
     }
     if (secondNum == null) {
         secondNum = Number(formResult.innerHTML);
-        formResult.innerHTML = '';
+        formResult.innerHTML = '0';
     } else if (firstNum == null) {
         firstNum = Number(formResult.innerHTML);
         secondNum = Calc(action, secondNum, firstNum);
@@ -74,7 +72,7 @@ let secondAction = (button) => {
         action = button.target.id;
     }
     if (continuationCalc = !continuationCalc) {
-        formResult.innerHTML = '';
+        formResult.innerHTML = '0';
     } else {
         firstNum = Number(formResult.innerHTML);
         secondNum = Calc(action, secondNum, firstNum);
