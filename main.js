@@ -17,21 +17,35 @@ let secondNum = null;
 let continuationCalc = false;
 
 let buttons = document.querySelectorAll('.button');
-let formResult = document.querySelector('.row.result')
+let formResult = document.querySelector('.row.result');
+formResult.innerHTML = '0';
 
 let cleanForm = () => {
-    formResult.innerHTML = '';
     action = 'sum';
     firstNum = null;
     secondNum = null;
+    formResult.innerHTML = '0';
 }
 
 let addNumForm = (button) => {
-    formResult.innerHTML += button.target.id.substring(1);
+    if (formResult.innerHTML.length < 6) {
+        if (button.target.id.substring(1) == '0' && formResult.innerHTML == '0') {
+        } else {
+            if (formResult.innerHTML === '0') {
+                formResult.innerHTML = '';
+            }
+            formResult.innerHTML += button.target.id.substring(1);
+        }
+    }
 }
+
+
 
 let removeNumForm = () => {
     formResult.innerHTML = formResult.innerHTML.slice(0, formResult.innerHTML.length - 1);
+    if (formResult.innerHTML === '') {
+        formResult.innerHTML = '0';
+    }
 }
 
 let result = () => {
