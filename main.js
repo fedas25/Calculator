@@ -88,9 +88,6 @@ for (const button of buttons) {
         case 'remove':
             button.onclick = removeNumForm;
             break;
-        case 'remove':
-            button.onclick = removeNumForm;
-            break;
         default:
             if (button.id.slice(0, 1) === '_') {
                 button.onclick = addNumForm;
