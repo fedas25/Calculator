@@ -1,4 +1,4 @@
-Calc = (action, a, b) => {
+let Calc = (action, a, b) => {
     switch (action) {
         case "sum":
             return Number((a + b).toFixed(2));
@@ -96,3 +96,6 @@ for (const button of buttons) {
             }
     }
 }
+
+import {a} from "./mod.js"
+a();
